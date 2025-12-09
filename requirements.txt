@@ -1,2 +1,4 @@
 vosk
-pyaudio
+pyaudioa
+pvporcupine
+python-dotenv

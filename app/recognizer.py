@@ -1,13 +1,20 @@
 from vosk import Model, KaldiRecognizer
+import pvporcupine
 from config import SAMPLE_RATE
 import pyaudio
+from dotenv import load_dotenv
+import os
 
-model = Model(r"models/vosk-model-en-in-0.5")
-recognizer = KaldiRecognizer(model,SAMPLE_RATE)
+load_dotenv()
+PORCUPINE_KEY = os.getenv("PICOVOICE_ACCESS_KEY")
+if not PORCUPINE_KEY:
+    raise RuntimeError("PICOVOICE_ACCESS_KEY not set")
+
+porcupine = pvporcupine.create(access_key=PORCUPINE_KEY,keyword_paths=["models/Hey-Teddy_en_linux_v3_0_0.ppn"])
+model = Model(r"models/vosk-model-small-en-in-0.4")
+recognizer = KaldiRecognizer(model,SAMPLE_RATE, '["open", "terminal", "browser", "shutdown", "reboot", "lock", "screen", "cancel"]')
 
 mic = pyaudio.PyAudio()
 stream = mic.open(format=pyaudio.paInt16, channels=1, rate=SAMPLE_RATE, input=True, frames_per_buffer=8192)
 
 stream.start_stream()
-
-

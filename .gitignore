@@ -1,3 +1,5 @@
 venv/
-vosk-model-en-in-0.5/
 app/__pycache__
+.env
+models
+service
