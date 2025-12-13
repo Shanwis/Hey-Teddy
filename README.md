@@ -1,5 +1,13 @@
 # Hey Teddy : A buddy for system voice assistance
 
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python&logoColor=white)
+![Vosk](https://img.shields.io/badge/Speech%20Recognition-VOSK-green?style=for-the-badge)
+![Linux](https://img.shields.io/badge/Linux-Desktop-informational?style=for-the-badge&logo=linux&logoColor=white)
+![Offline](https://img.shields.io/badge/Fully-Offline-success?style=for-the-badge)
+![System Control](https://img.shields.io/badge/System-Automation-red?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+
+
 This is a project attempting to make an offline voice assistant using the vosk library for voice-to-text parsing. I want to have an extensive selection of commands which can be executed through voice.
 
 ## Features (of V1)
