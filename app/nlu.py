@@ -25,6 +25,8 @@ INTENTS = {
 
     "battery_status":["battery level","power level", "battery"],
 
+    "joke":["tell a joke", "joke", "say something funny"],
+
     "cancel": ["cancel", "nevermind"],
     "stop_assistant": ["stop","stop assistant"]
 }

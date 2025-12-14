@@ -1,5 +1,6 @@
 import os
 import sys
+import pyjokes
 from tts import speak
 
 def battery():
@@ -9,6 +10,11 @@ def battery():
 def stop_assistant():
     speak("Ok, see you later!")
     sys.exit(0)
+
+def joking():
+    joke = pyjokes.get_joke()
+    speak(joke)
+    print(joke)
 
 commands = {
     "shutdown":lambda:os.system("shutdown now"),
@@ -36,6 +42,8 @@ commands = {
     "bluetooth_off":lambda:os.system("bluetoothctl power off"),
     
     "battery_status":battery,
+
+    "joke":joking,
 
     "stop_assistant":stop_assistant,
 }
