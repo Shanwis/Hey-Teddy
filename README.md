@@ -56,6 +56,8 @@ Teddy listens for a wake word using:
 
 **Vosk (vosk-model-small-en-us-0.15)** — low-memory offline speech-to-text model ideal for command recognition
 
+**Piper** — for text-t0-speech
+
 No cloud processing. No internet required.
 
 ## Project structure
@@ -63,7 +65,8 @@ No cloud processing. No internet required.
 ```bash
 Hey-Teddy/
 ├── models/
-│   └── vosk-model-small-en-us-0.15/
+│   └── vosk-model-small-en-en-0.4/
+│   └── en_US-ryan-medium.onnx/
 ├── app
 │   ├── commands.py
 │   ├── config.py
@@ -87,13 +90,13 @@ Hey-Teddy/
 1. Clone the repo
 
 ```bash
-git clone https://github.com/<your-username>/Hi-Teddy.git
+git clone https://github.com/shanwis/Hi-Teddy.git
 cd Hi-Teddy
 ```
 
 2. Install dependencies
 ```bash
-pip install -r Requirements/Requirements/requirements_python.txt
+pip install -r Requirements/requirements_python.txt
 sudo dnf install wmctrl brightnessctl nmcli
 ```
 

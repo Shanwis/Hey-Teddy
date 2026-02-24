@@ -3,4 +3,5 @@ pyaudio
 pvporcupine==3.0.0
 python-dotenv
 pyttsx3
+piper-tts
 pyjokes

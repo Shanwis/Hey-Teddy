@@ -1,7 +1,7 @@
 import os
 import sys
 import pyjokes
-from tts import speak
+from tts import speak, close_audio
 
 def battery():
     percent = open("/sys/class/power_supply/BAT0/capacity").read().strip()
@@ -9,6 +9,8 @@ def battery():
 
 def stop_assistant():
     speak("Ok, see you later!")
+    
+    close_audio()
     sys.exit(0)
 
 def joking():
