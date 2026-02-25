@@ -8,16 +8,13 @@ def battery():
     speak(f"battery level is {percent}%")
 
 def stop_assistant():
-    speak("Ok, see you later!")
-    
     close_audio()
     sys.exit(0)
 
 def joking():
     joke = pyjokes.get_joke()
     speak(joke)
-    print(joke)
-
+    
 commands = {
     "shutdown":lambda:os.system("shutdown now"),
     "reboot":lambda:os.system("reboot"),
