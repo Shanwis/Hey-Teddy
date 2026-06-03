@@ -9,8 +9,8 @@ INTENTS = {
     "open_editor":["open editor", "launch editor"],
     "close_window":["close window","stop window"],
 
-    "mute_speaker":["mute speaker"],
-    "unmute_speaker":["unmute speaker"],
+    "mute_speaker":["mute", "mute speaker", "sound off"],
+    "unmute_speaker":["unmute", "unmute speaker", "sound on"],
     "volume_up":["increase volume","volume up"],
     "volume_down":["decrease volume", "reduce volume","volume down"],
 

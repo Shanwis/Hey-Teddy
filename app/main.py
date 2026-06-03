@@ -24,7 +24,6 @@ while True:
 
         while True:
             data = stream.read(BUFFER_SIZE, exception_on_overflow=False)
-
             if recognizer.AcceptWaveform(data):
                 result = json.loads(recognizer.Result())
                 command = result["text"].strip().lower()

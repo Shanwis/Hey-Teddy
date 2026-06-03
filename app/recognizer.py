@@ -11,8 +11,8 @@ if not PORCUPINE_KEY:
     raise RuntimeError("PICOVOICE_ACCESS_KEY not set")
 
 porcupine = pvporcupine.create(access_key=PORCUPINE_KEY,keyword_paths=["models/Hey-Teddy_en_linux_v3_0_0.ppn"])
-model = Model(r"models/vosk-model-small-en-us-0.15")
-recognizer = KaldiRecognizer(model,SAMPLE_RATE, '["open", "terminal", "browser", "shutdown", "reboot", "lock", "joke", "tell","a","screen", "cancel", "close", "window", "speaker", "up", "down","increase","decrease","volume","mute","unmute","speaker", "brightness", "battery", "power", "level", "internet", "on", "off", "bluetooth","reduce", "editor", "stop", "assistant"]')
+model = Model(r"models/vosk-model-en-in-0.5")
+recognizer = KaldiRecognizer(model,SAMPLE_RATE, '["open", "terminal", "browser", "shutdown", "reboot", "lock", "joke", "tell","a","screen", "cancel", "close", "window", "speaker", "up", "down","increase","decrease","volume","mute","unmute", "brightness", "battery", "power", "level", "internet", "on", "off", "bluetooth","reduce", "editor", "stop", "assistant", "sound"]')
 
 mic = pyaudio.PyAudio()
 stream = mic.open(format=pyaudio.paInt16, channels=1, rate=SAMPLE_RATE, input=True, frames_per_buffer=8192)
